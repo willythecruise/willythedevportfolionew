@@ -1,17 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
-
-import {
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerClose,
-} from '@/components/navigation/drawer';
+import { Menu } from 'lucide-react';
+import Sidebar from '@/components/layout/sidebar';
 import { NAV_LINKS } from '@/lib/data';
 import { mergeClasses } from '@/lib/utils';
-import useWindowSize from '@/hooks/use-window-size';
 import useScroll from '@/hooks/use-scroll';
 import Link from '@/components/navigation/link';
 import ThemeSwitcher from '@/components/general/theme-switcher';
@@ -28,14 +21,11 @@ const Logo = () => (
 const Header = () => {
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
-  const size = useWindowSize();
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-  // close sidebar if open in screen size < 768px
-  useEffect(() => {
-    if (size?.width && size?.width > 767 && isOpen) {
-      setIsOpen(false);
-    }
-  }, [size, isOpen]);
+  const toggleTheme = () => {
+    setIsDarkTheme(prev => !prev);
+  };
 
   return (
     <header
@@ -63,50 +53,14 @@ const Header = () => {
           </div>
         </div>
 
-        <Drawer open={isOpen} onOpenChange={setIsOpen}>
-          <DrawerTrigger asChild className="flex md:hidden">
-            <IconButton>
-              <Menu />
-            </IconButton>
-          </DrawerTrigger>
-          <DrawerContent>
-            <div className="flex items-center justify-between border-b border-gray-100 p-4">
-              <Logo />
-              <DrawerClose asChild>
-                <IconButton>
-                  <X />
-                </IconButton>
-              </DrawerClose>
-            </div>
-            <div className="border-b border-gray-100 p-4">
-              <ul className="flex list-none flex-col gap-4">
-                {NAV_LINKS.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      onClick={() => {
-                        const timeoutId = setTimeout(() => {
-                          setIsOpen(false);
-                          clearTimeout(timeoutId);
-                        }, 500);
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-col gap-4 p-4">
-              <div className="flex items-center justify-between">
-                <Typography>Switch Theme</Typography>
-                <ThemeSwitcher />
-              </div>
-              <DownloadCV />
-            </div>
-          </DrawerContent>
-        </Drawer>
+        <IconButton className='sm:hidden' onClick={() => setIsOpen(true)}>
+          <Menu />
+        </IconButton>
       </div>
+
+    
+     <Sidebar isOpen={isOpen} onClose={() => setIsOpen(false)} isDarkTheme={isDarkTheme} />
+   
     </header>
   );
 };
