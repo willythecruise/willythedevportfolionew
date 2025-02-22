@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 
 const SkillsSection = () => {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0.4 });
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const SkillsSection = () => {
 
   return (
     <Container ref={ref}>
-      <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-slide-in' : ''}`}>
+      <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-panInBottom' : ''}`}>
         <div className="self-center">
           <Tag label="Skills" />
         </div>
@@ -29,7 +29,7 @@ const SkillsSection = () => {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
+      <div className="grid animate-pulse grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
         {TECHNOLOGIES.map((technology, index) => (
           <TechDetails {...technology} key={index} />
         ))}

@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <Container id="hero" ref={ref}>
-      <div className={`flex flex-col gap-12 md:flex-row ${animate ? 'animate-slide-in' : ''}`}>
+      <div className={`flex flex-col gap-12 md:flex-row animate-panInLeft  ${animate ? '' : ''}`}>
         {/* Image */}
         <div className="flex  md:order-last md:flex-grow md:justify-end">
           <div className="relative h-[300px] w-[280px] md:h-full md:w-full">
