@@ -8,7 +8,7 @@ import { TechDetailsType } from '@/lib/types';
 
 const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetailsType) => {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-2 animate-pulse">
       <Link noCustomization href={url} externalLink>
         <ImageWrapper
           src={logo}

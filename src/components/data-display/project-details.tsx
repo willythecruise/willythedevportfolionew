@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 
@@ -7,7 +9,8 @@ import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import Tag from '@/components/data-display/tag';
 import Card from '@/components/layout/card';
-
+import { useInView } from 'react-intersection-observer';
+import { useState,useEffect } from 'react';
 type ProjectDetailsProps = ProjectDetailsType & {
   layoutType: 'default' | 'reverse';
 };
@@ -20,12 +23,24 @@ const ProjectDetails = ({
   previewImage,
   layoutType = 'default',
 }: ProjectDetailsProps) => {
+
+  const { ref, inView } = useInView({ threshold: 0.1 });
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true);
+    }
+  }, [inView]);
+
   return (
-    <Card className="mx-auto flex w-full max-w-6xl flex-col md:flex-row">
+    <Card
+    ref={ref}
+    className={`mx-auto flex w-full max-w-6xl flex-col md:flex-row ${animate ? 'animate-panInLeft' : ''}`}>
       {/* Image */}
       <div
         className={mergeClasses(
-          'flex items-center justify-center border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12',
+          `flex items-center justify-center border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12`,
           layoutType === 'default'
             ? 'md:rounded-l-xl md:border-r'
             : 'md:order-last md:rounded-r-xl md:border-l'
