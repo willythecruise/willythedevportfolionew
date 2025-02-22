@@ -19,20 +19,23 @@ import LogoCypress from '/public/images/logos/icon-cypress.svg';
 import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
 import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
+import LogoExpo from  '/public/images/logos/logo-wordmark.svg';
 
 import LogoUpwork from '/public/images/logos/logo-upwork.svg';
 import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
 import LogoGreenApexLight from '/public/images/logos/logo-greenapex-light.svg';
 import LogoDotnpixel from '/public/images/logos/logo-dotnpixel.svg';
 import LogoDotnpixelLight from '/public/images/logos/logo-dotnpixel-light.svg';
+import LogoWebIQ from '/public/images/logos/webiq.png';
 
-import ProjectFiskil from '/public/images/project-fiskil.png';
-import ProjectWingie from '/public/images/project-wingie.png';
-import ProjectPepehousing from '/public/images/project-pepehousing.png';
+import PrepaidMeter from '/public/images/prepaidmeter.png';
+import Relisted from '/public/images/relisted.png';
+import Naji from '/public/images/naji.png';
 
 import AvatarKrisztian from '/public/images/avatar-krisztian.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
 import AvatarDummy from '/public/images/avatar-dummy.svg';
+
 
 import {
   ExperienceDetails,
@@ -51,10 +54,10 @@ export const EXTERNAL_LINKS = {
 };
 
 export const NAV_LINKS = [
-  {
-    label: 'About',
-    href: '#about',
-  },
+  // {
+  //   label: 'About',
+  //   href: '#about',
+  // },
   {
     label: 'Work',
     href: '#work',
@@ -101,6 +104,11 @@ export const TECHNOLOGIES: TechDetails[] = [
     url: 'https://react.dev/',
   },
   {
+    label: 'Expo',
+    logo: LogoExpo,
+    url: 'https://expo.dev/',
+  },
+  {
     label: 'Next.js',
     logo: LogoNextjs,
     url: 'https://nextjs.org/',
@@ -116,17 +124,17 @@ export const TECHNOLOGIES: TechDetails[] = [
     darkModeLogo: LogoExpressLight,
     url: 'https://expressjs.com/',
   },
-  {
-    label: 'Nest.js',
-    logo: LogoNest,
-    url: 'https://nestjs.com/',
-  },
-  {
-    label: 'Socket.io',
-    logo: LogoSocket,
-    darkModeLogo: LogoSocketLight,
-    url: 'https://socket.io/',
-  },
+  // {
+  //   label: 'Nest.js',
+  //   logo: LogoNest,
+  //   url: 'https://nestjs.com/',
+  // },
+  // {
+  //   label: 'Socket.io',
+  //   logo: LogoSocket,
+  //   darkModeLogo: LogoSocketLight,
+  //   url: 'https://socket.io/',
+  // },
   {
     label: 'PostgreSQL',
     logo: LogoPostgreSQL,
@@ -137,32 +145,32 @@ export const TECHNOLOGIES: TechDetails[] = [
     logo: LogoMongoDB,
     url: 'https://www.mongodb.com/',
   },
-  {
-    label: 'Sass/Scss',
-    logo: LogoSass,
-    url: 'https://sass-lang.com/',
-  },
+  // {
+  //   label: 'Sass/Scss',
+  //   logo: LogoSass,
+  //   url: 'https://sass-lang.com/',
+  // },
   {
     label: 'Tailwindcss',
     logo: LogoTailwindcss,
     url: 'https://tailwindcss.com/',
   },
-  {
-    label: 'Figma',
-    logo: LogoFigma,
-    url: 'https://www.figma.com/',
-  },
-  {
-    label: 'Cypress',
-    logo: LogoCypress,
-    darkModeLogo: LogoCypressLight,
-    url: 'https://www.cypress.io/',
-  },
-  {
-    label: 'Storybook',
-    logo: LogoStorybook,
-    url: 'https://storybook.js.org/',
-  },
+  // {
+  //   label: 'Figma',
+  //   logo: LogoFigma,
+  //   url: 'https://www.figma.com/',
+  // },
+  // {
+  //   label: 'Cypress',
+  //   logo: LogoCypress,
+  //   darkModeLogo: LogoCypressLight,
+  //   url: 'https://www.cypress.io/',
+  // },
+  // {
+  //   label: 'Storybook',
+  //   logo: LogoStorybook,
+  //   url: 'https://storybook.js.org/',
+  // },
   {
     label: 'Git',
     logo: LogoGit,
@@ -172,95 +180,111 @@ export const TECHNOLOGIES: TechDetails[] = [
 
 export const EXPERIENCES: ExperienceDetails[] = [
   {
-    logo: LogoUpwork,
-    logoAlt: 'Upwork logo',
-    position: 'Independent Freelancer',
-    startDate: new Date(2021, 10),
+    name: "ORION INDUSTRIAL",
+    position: 'LEAD SOFTWARE ARCHITECT AND SOFTWARE ENGINEER',
+    startDate: new Date(2024, 2),
     currentlyWorkHere: true,
     summary: [
-      'Worked for various clients like Fiskil, Shosho, Crowe MacKay LLP.',
-      'Worked with a variety of technologies, including React, Next.js, Typescript, Express.js, PostgreSQL, Tailwindcss, Mui, Firebase, Storybook, Cypress, and others.',
+      'Led the team, providing a clear roadmap and efficient execution of software projects.',
+      'Deployed software solutions on AWS.',
+      'Provided rigorous testing for both mobile and web applications, maintaining high-quality standards.',
+      'Developed and maintained code for both frontend and backend of mobile and web applications in React Native, Node Js, and React.'
     ],
   },
   {
-    logo: LogoGreenApex,
-    darkModeLogo: LogoGreenApexLight,
-    logoAlt: 'Greenapex logo',
-    position: 'Team Lead',
+    name: "WebIQ",
+    position: 'CONTRACT SOFTWARE DEVELOPRER,',
     startDate: new Date(2017, 6),
     endDate: new Date(2021, 9),
     summary: [
-      'Acted as team lead in different projects.',
-      'Brainstormed new ideas & gathered requirements for internal projects.',
+      'Built and delivered enterprise-level projects for a diverse range of clients, tailoring solutions to meet specific business needs.',
+      'Consistently met deadlines, exceeding client’s requirements while working within budget',
       'Designed architecture of different projects (frontend + backend).',
-      'Worked on enterprise-level projects for a variety of clients.',
-      'Handled sprint planning & task distribution.',
+   
     ],
   },
   {
-    logo: LogoDotnpixel,
-    darkModeLogo: LogoDotnpixelLight,
-    logoAlt: 'Dotnpixel logo',
-    position: 'Full Stack Developer',
+    name: "AI TECHNOLOGIES",
+    position: 'SOFTWARE DEVELOPER/TRAINING INSTRUCTOR',
     startDate: new Date(2015, 11),
     endDate: new Date(2017, 4),
-    summary: ['Worked as a full stack developer (React / Laravel).'],
+    summary: [
+      'Worked as the only instructor/developer that had full-stack and mobile capabilities at the branch.',
+      'Was termed the fastest instructor to integrate quickly, having built software within 2 weeks of employment in NextJS.',
+      'Trained and mentored students in various programming languages.'
+    ],
+  },
+  {    
+    name: "Prepaidmeter.ng",
+    position: 'LEAD SOFTWARE ENGINEER,',
+    startDate: new Date(2015, 11),
+    endDate: new Date(2017, 4),
+    summary: [
+      'Led the development of realtime IOT systems with MQT using NodeJS.',
+      'Single handedly built the version 1 backend of the application powering their current platform using NodeJs and built the frontend in JS: https://prepaidmeter.ng.',
+      'Served as the lead backend engineer and delivered 2 major projects in record time.',
+      'Built and designed visually appealing graphs'
+    ],
+  },
+  {
+    name:"NEONET WIRELESS",
+    position: 'SOFTWARE DEVELOPER/TRAINING INSTRUCTOR,,',
+    startDate: new Date(2015, 11),
+    endDate: new Date(2017, 4),
+    summary: [
+      'Worked as a programmiing instructor, teaching Python, JavaScript, Nextjs, Html, Css, NodeJs.',
+      'Built web applications for clients.',
+      'Led students onto career paths in software development.'
+    ],
   },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: 'Wingie',
+    name: 'PrepaidMeter.ng',
     description:
-      'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.',
-    url: 'https://www.wingie.com',
-    previewImage: ProjectWingie,
+      ' A web-based remote energy-metre recharging and monitoring application that allows users to manage their energy consumption efficiently.',
+    url: 'https://www.prepaidmeter.ng',
+    previewImage: PrepaidMeter,
     technologies: [
       'React',
       'Typescript',
-      'React Bootstrap',
-      'Firebase',
+      'TailwindCss',
       'Express.js',
-      'PostgreSQL',
-      'Styled Components',
-      'Redux',
+      ' MongoDB',
+      'MQTT',
     ],
   },
   {
-    name: 'Fiskil',
+    name: 'Relisted Labels',
     description:
-      'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
-    url: 'https://fiskil.com.au',
-    previewImage: ProjectFiskil,
+      'An E-commerce clothing and accessories renting/buying platform with buyers and sellers sections',
+    url: 'https://relisted-labels.vercel.app',
+    previewImage: Relisted,
+    technologies: [
+      'React',
+      'Nx',
+      'Next.js',
+      'Typescript',
+      'Tailwindcss',
+      'Radix UI',
+      'React Query',
+      'Express.js',
+
+    ],
+  },
+  {
+    name: 'Naji Realties',
+    description:
+      'A shortlet apartment, fully automated booking platform',
+    url: 'https://najirealties.ng',
+    previewImage: Naji,
     technologies: [
       'React',
       'Next.js',
       'Typescript',
       'Tailwindcss',
-      'Material UI',
-      'Redux Toolkit',
-      'React Query',
-      'Express.js',
-      'PostgreSQL',
-      'Firebase',
-      'AWS Amplify',
-      'Cypress',
-      'Storybook',
-    ],
-  },
-  {
-    name: 'Pepehousing',
-    description:
-      'A platform for renting a flat or room in Poland. You may browse hundreds of verified deals, contact the vendor, and pay online in a simple and secure manner.',
-    url: 'https://pepehousing.com',
-    previewImage: ProjectPepehousing,
-    technologies: [
-      'React',
-      'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'Redux Toolkit',
-      'React Query',
+      'MongoDB',
       'Storybook',
     ],
   },
@@ -268,24 +292,27 @@ export const PROJECTS: ProjectDetails[] = [
 
 export const TESTIMONIALS: TestimonialDetails[] = [
   {
-    personName: 'Krisztian Gyuris',
-    personAvatar: AvatarKrisztian,
-    title: 'Founder - inboxgenie.io',
-    testimonial:
-      'Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development.',
-  },
-  {
-    personName: 'Eugen Esanu',
-    personAvatar: AvatarEugen,
-    title: 'Founder - shosho.design',
-    testimonial:
-      'Great guy, highly recommended for any COMPLEX front-end development job! His skills are top-notch and he will be an amazing addition to any team.',
-  },
-  {
-    personName: 'Joe Matkin',
+    personName: 'Joseph Ogbaji',
     personAvatar: AvatarDummy,
-    title: 'Freelancer',
+    title: 'Founder - webiq.com.ng',
+    link:"https://webiq.com.ng",
     testimonial:
-      'Sagar was extremely easy and pleasant to work with and he truly cares about the project being a success. Sagar has a high level of knowledge and was able to work on my MERN stack application without any issues.',
+      'Job well done! I am really impressed. He is very very good at what he does:) I highly recommend William.',
+  },
+  {
+    personName: 'Emmanuel Onuzurike',
+    personAvatar: AvatarDummy,
+    link:"https://ng.linkedin.com/in/emmanuel-onuzurike-7606b7100g",
+    title: 'Founder - neonetwireless.design',
+    testimonial:
+      'Great guy, highly recommended for any COMPLEX back-end development job! His skills are top-notch and he will be an amazing addition to any team.',
+  },
+  {
+    personName: 'Joe',
+    personAvatar: AvatarDummy,
+    title: 'Founder - aitechnologies.ng',
+    link:"https://aitechnologiesng.com/",
+    testimonial:
+      'William is honest, hard working and keeps to his words. He is a very skilled software engineer and a wonderful instructor. Glad he is part of my team.  ',
   },
 ];

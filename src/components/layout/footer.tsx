@@ -10,15 +10,15 @@ const Footer = () => {
       <div className="flex items-center justify-center gap-1">
         <Typography className="flex items-center" variant="body3">
           <Copyright className="mr-1 inline-block h-4 w-4" />
-          {new Date().getFullYear()} |&nbsp;
-          <Link
+          {new Date().getFullYear()} |&nbsp; Emmanuel William
+          {/* <Link
             noCustomization
             externalLink
             withUnderline
             href={EXTERNAL_LINKS.FIGMA_FILE}
           >
             Designed
-          </Link>
+          </Link>xb
           &nbsp;and&nbsp;
           <Link
             noCustomization
@@ -28,7 +28,7 @@ const Footer = () => {
           >
             coded
           </Link>
-          &nbsp;with ❤️️ by Sagar Shah
+          &nbsp;with ❤️️ by Emman */}
         </Typography>
       </div>
     </footer>

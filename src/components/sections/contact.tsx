@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Copy, Mail, Phone } from 'lucide-react';
 // import Link from 'next/link';
+import { useInView } from 'react-intersection-observer';
 
 import SocialIcons from '@/components/data-display/social-icons';
 import Tag from '@/components/data-display/tag';
@@ -12,8 +13,8 @@ import Container from '@/components/layout/container';
 import useWindowSize from '@/hooks/use-window-size';
 import { copyTextToClipboard } from '@/lib/utils';
 
-let email = 'reachsagarshah@gmail.com';
-let phone = '+91 8980500565';
+let email = 'emmanuelwilliam49@gmail.com';
+let phone = '07065834206';
 
 type CopyValue = 'email' | 'phone';
 
@@ -23,6 +24,8 @@ const ContactSection = () => {
   const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(
     null
   );
+  const { ref, inView } = useInView({ threshold: 0.1 });
+  const [animate, setAnimate] = useState(false);
 
   const handleCopyClick = async (text: string, type: CopyValue) => {
     try {
@@ -41,9 +44,15 @@ const ContactSection = () => {
     }
   };
 
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true);
+    }
+  }, [inView]);
+
   return (
-    <Container id="contact">
-      <div className="flex flex-col items-center gap-4">
+    <Container id="contact" ref={ref}>
+      <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-slide-in' : ''}`}>
         <div className="self-center">
           <Tag label="Get in touch" />
         </div>

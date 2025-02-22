@@ -1,13 +1,26 @@
+'use client'
+
 import { TECHNOLOGIES } from '@/lib/data';
 import Tag from '@/components/data-display/tag';
 import TechDetails from '@/components/data-display/tech-details';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
+import { useInView } from 'react-intersection-observer';
+import { useEffect, useState } from 'react';
 
 const SkillsSection = () => {
+  const { ref, inView } = useInView({ threshold: 0.1 });
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true);
+    }
+  }, [inView]);
+
   return (
-    <Container>
-      <div className="flex flex-col items-center gap-4">
+    <Container ref={ref}>
+      <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-slide-in' : ''}`}>
         <div className="self-center">
           <Tag label="Skills" />
         </div>

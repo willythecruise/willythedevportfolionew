@@ -8,9 +8,7 @@ export type TechDetails = {
 };
 
 export type ExperienceDetails = {
-  logo: string | StaticImageData;
-  darkModeLogo?: string | StaticImageData;
-  logoAlt: string;
+  name: string;
   position: string;
   currentlyWorkHere?: boolean;
   startDate: Date;
@@ -27,6 +25,7 @@ export type ProjectDetails = {
 };
 
 export type TestimonialDetails = {
+  link: string;
   personName: string;
   personAvatar?: string | StaticImageData;
   testimonial: string;

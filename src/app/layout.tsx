@@ -8,10 +8,11 @@ import { Providers } from '@/lib/providers';
 import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
-
-const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
+import { Montserrat } from 'next/font/google';
+const montserrat= Montserrat({subsets:["latin"]})
+const title = 'Emmanuel William | Full Stack Developer.';
 const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
+  'A Software Engineer who specializes in full stack development (React.js & Node.js), and mobile Development (React Native).';
 const url = 'https://sagarshah.dev';
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   ],
   creator: 'Sagar Shah',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: light)', color: 'black' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
   openGraph: {
@@ -81,7 +82,7 @@ export default function RootLayout({
           </Script>
         </head>
       ) : null}
-      <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
+      <body className={`${montserrat.className} bg-gray text-gray-900 antialiased`}>
         <Providers>
           <Header />
           <main className="flex min-h-screen w-full flex-col">{children}</main>
