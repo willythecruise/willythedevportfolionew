@@ -40,7 +40,7 @@ import AvatarDummy from '/public/images/avatar-dummy.svg';
 import {
   ExperienceDetails,
   ProjectDetails,
-  TechDetails,
+  TechDetailsType,
   TestimonialDetails,
 } from '@/lib/types';
 
@@ -87,7 +87,7 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-export const TECHNOLOGIES: TechDetails[] = [
+export const TECHNOLOGIES: TechDetailsType[] = [
   {
     label: 'Javascript',
     logo: LogoJavascript,

@@ -4,8 +4,9 @@
 import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import ImageWrapper from '@/components/data-display/image-wrapper';
+import { TechDetailsType } from '@/lib/types';
 
-const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetails) => {
+const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetailsType) => {
   return (
     <div className="flex flex-col items-center gap-2">
       <Link noCustomization href={url} externalLink>
