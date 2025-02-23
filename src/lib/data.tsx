@@ -195,7 +195,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   },
   {
     name: "WebIQ",
-    position: 'CONTRACT SOFTWARE DEVELOPRER,',
+    position: 'CONTRACT SOFTWARE DEVELOPRER',
     startDate: new Date(2023, 6),
     currentlyWorkHere: true,
     summary: [
@@ -218,7 +218,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   },
   {    
     name: "Prepaidmeter.ng",
-    position: 'LEAD SOFTWARE ENGINEER,',
+    position: 'LEAD SOFTWARE ENGINEER',
     startDate: new Date(2021, 11),
     endDate: new Date(2023, 4),
     summary: [
@@ -230,7 +230,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   },
   {
     name:"NEONET WIRELESS",
-    position: 'SOFTWARE DEVELOPER/TRAINING INSTRUCTOR,,',
+    position: 'SOFTWARE DEVELOPER/TRAINING INSTRUCTOR',
     startDate: new Date(2023, 7),
     endDate: new Date(2024, 8),
     summary: [

@@ -51,7 +51,7 @@ const ContactSection = () => {
   }, [inView]);
 
   return (
-    <Container id="contact" ref={ref}>
+    <Container id="contact" ref={ref} className='p-5 sm:p-0'>
       <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-slide-in' : ''}`}>
         <div className="self-center">
           <Tag label="Get in touch" />

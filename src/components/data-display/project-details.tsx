@@ -36,11 +36,11 @@ const ProjectDetails = ({
   return (
     <Card
     ref={ref}
-    className={`mx-auto flex w-full max-w-6xl flex-col md:flex-row ${animate ? 'animate-panInLeft' : ''}`}>
+    className={`mx-auto flex w-full max-w-6xl flex-col md:flex-row ${animate ? 'animate-panInLeft' : ''} transition-transform duration-300 hover:scale-105`}>
       {/* Image */}
       <div
         className={mergeClasses(
-          `flex items-center justify-center border-gray-100  p-8 max-md:rounded-t-xl md:w-1/2 lg:p-12`,
+          `flex items-center justify-center border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12`,
           layoutType === 'default'
             ? 'md:rounded-l-xl md:border-r'
             : 'md:order-last md:rounded-r-xl md:border-l'
@@ -50,9 +50,7 @@ const ProjectDetails = ({
           <Image
             src={previewImage}
             alt={`${name} preview`}
-            className={`rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105 ${
-              name === 'Sanitrack' ? 'h-[400px] w-[300px] object-cover' : 'h-auto w-full'
-            }`}
+            className={`rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105`}
             style={{ objectFit: 'cover' }}
           />
         </Link>
