@@ -281,7 +281,7 @@ export const PROJECTS: ProjectDetails[] = [
     name: 'Naji Realties',
     description:
       'A shortlet apartment, fully automated booking platform',
-    url: 'https://najirealties.ng',
+    url: 'https://www.najirealties.ng',
     previewImage: Naji,
     technologies: [
       'React',
