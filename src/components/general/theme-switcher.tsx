@@ -1,36 +1,34 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { MoonStar, Sun } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
-import IconButton from '@/components/general/icon-button';
-
 const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [isDarkTheme, setIsDarkTheme] = useState(true); // Default to dark theme
+  const {setTheme,theme}= useTheme()
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setIsDarkTheme(prev => !prev);
+
+
   };
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // until the UI is mounted, display a dummy icon
-  if (!mounted) {
-    return (
-      <IconButton>
-        <Sun />
-      </IconButton>
-    );
-  }
+    document.documentElement.setAttribute('data-theme', isDarkTheme ? 'dark' : 'light');
+    if (isDarkTheme) {
+      setTheme("dark")
+    }
+    else{
+      setTheme("light")
+    }
+  
+  }, [isDarkTheme]);
 
   return (
-    <IconButton onClick={toggleTheme}>
-      {theme === 'dark' ? <Sun /> : <MoonStar />}
-    </IconButton>
+    <button onClick={toggleTheme} aria-label="Toggle theme">
+      {isDarkTheme ? <Sun /> : <Moon />}
+    </button>
   );
 };
 

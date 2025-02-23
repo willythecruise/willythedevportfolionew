@@ -20,6 +20,7 @@ import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
 import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
 import LogoExpo from  '/public/images/logos/logo-wordmark.svg';
+import LogoExpoLight from   '/public/images/logos/logo-wordmark-light.png';
 
 import LogoUpwork from '/public/images/logos/logo-upwork.svg';
 import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
@@ -31,7 +32,7 @@ import LogoWebIQ from '/public/images/logos/webiq.png';
 import PrepaidMeter from '/public/images/prepaidmeter.png';
 import Relisted from '/public/images/relisted.png';
 import Naji from '/public/images/naji.png';
-
+import Sanitrack from '/public/images/sanitrack.png';
 import AvatarKrisztian from '/public/images/avatar-krisztian.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
 import AvatarDummy from '/public/images/avatar-dummy.svg';
@@ -106,6 +107,7 @@ export const TECHNOLOGIES: TechDetailsType[] = [
   {
     label: 'Expo',
     logo: LogoExpo,
+    darkModeLogo: LogoExpoLight,
     url: 'https://expo.dev/',
   },
   {
@@ -194,8 +196,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     name: "WebIQ",
     position: 'CONTRACT SOFTWARE DEVELOPRER,',
-    startDate: new Date(2017, 6),
-    endDate: new Date(2021, 9),
+    startDate: new Date(2023, 6),
+    currentlyWorkHere: true,
     summary: [
       'Built and delivered enterprise-level projects for a diverse range of clients, tailoring solutions to meet specific business needs.',
       'Consistently met deadlines, exceeding client’s requirements while working within budget',
@@ -206,8 +208,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     name: "AI TECHNOLOGIES",
     position: 'SOFTWARE DEVELOPER/TRAINING INSTRUCTOR',
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
+    startDate: new Date(2023, 11),
+    endDate: new Date(2024, 2),
     summary: [
       'Worked as the only instructor/developer that had full-stack and mobile capabilities at the branch.',
       'Was termed the fastest instructor to integrate quickly, having built software within 2 weeks of employment in NextJS.',
@@ -217,8 +219,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {    
     name: "Prepaidmeter.ng",
     position: 'LEAD SOFTWARE ENGINEER,',
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
+    startDate: new Date(2021, 11),
+    endDate: new Date(2023, 4),
     summary: [
       'Led the development of realtime IOT systems with MQT using NodeJS.',
       'Single handedly built the version 1 backend of the application powering their current platform using NodeJs and built the frontend in JS: https://prepaidmeter.ng.',
@@ -229,8 +231,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     name:"NEONET WIRELESS",
     position: 'SOFTWARE DEVELOPER/TRAINING INSTRUCTOR,,',
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
+    startDate: new Date(2023, 7),
+    endDate: new Date(2024, 8),
     summary: [
       'Worked as a programmiing instructor, teaching Python, JavaScript, Nextjs, Html, Css, NodeJs.',
       'Built web applications for clients.',
@@ -264,6 +266,24 @@ export const PROJECTS: ProjectDetails[] = [
     technologies: [
       'React',
       'Nx',
+      'Next.js',
+      'Typescript',
+      'Tailwindcss',
+      'Radix UI',
+      'TRPC',
+      'Express.js',
+
+    ],
+  },
+  {
+    name: 'Sanitrack',
+    description:
+      'A facility management sanitation and supervision tracker',
+      'url':"#",// url: 'https://relisted-labels.vercel.app',
+    previewImage: Sanitrack,
+    technologies: [
+      'ReactNative',
+      'Expo',
       'Next.js',
       'Typescript',
       'Tailwindcss',

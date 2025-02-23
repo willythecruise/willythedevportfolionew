@@ -50,7 +50,9 @@ const ProjectDetails = ({
           <Image
             src={previewImage}
             alt={`${name} preview`}
-            className="rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105"
+            className={`rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105 ${
+              name === 'Sanitrack' ? 'h-[400px] w-[300px] object-cover' : 'h-auto w-full'
+            }`}
             style={{ objectFit: 'cover' }}
           />
         </Link>
