@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <Container id="hero" ref={ref}>
-      <div className={`flex flex-col md:flex-row ${animate ? 'animate-panInLeft' : ''}`}>
+      <div className={`flex flex-col md:flex-row  animate-panInBottom`}>
         {/* Image */}
         <div className="flex md:order-last md:flex-grow md:justify-end">
           <div className="sm:relative flex flex-col p-2 items-center h-[300px] w-full md:h-full md:w-full">
@@ -38,9 +38,9 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12">
+        <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 animate-fadeIn delay-100 md:order-first md:items-start md:justify-center 2xl:gap-12">
           <div className="flex flex-col gap-2">
-            <div className="border-b-2 p-10 border-black sm:mb-8 mb-3 text-center md:text-left">
+            <div className="border-b-2 p-10 border-black dark:border-white sm:mb-8 mb-3 text-center md:text-left">
               <p className="font-bold sm:text-6xl text-4xl">WILLIAM <br /> EMMANUEL</p>
               <p className="text-lg">SOFTWARE ENGINEER</p>
             </div>

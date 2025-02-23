@@ -11,8 +11,9 @@ const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetailsType) => {
     <div className="flex flex-col items-center gap-2 animate-pulse">
       <Link noCustomization href={url} externalLink>
         <ImageWrapper
-          src={logo}
+          src={ logo }
           srcForDarkMode={darkModeLogo}
+          
           alt={label}
           className="transition-transform duration-300 md:hover:scale-110"
         />

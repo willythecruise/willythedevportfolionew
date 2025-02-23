@@ -9,7 +9,7 @@ const Card = React.forwardRef<HTMLElement, ContainerProps>(
     return (
       <section
       className={mergeClasses(
-        'rounded-xl  shadow-md dark:bg-gray-100 dark:shadow-2xl',
+        'rounded-xl  shadow-md dark:shadow-2xl',
         className
       )}
       ref={ref}

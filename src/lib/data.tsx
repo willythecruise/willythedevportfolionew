@@ -20,6 +20,7 @@ import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
 import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
 import LogoExpo from  '/public/images/logos/logo-wordmark.svg';
+import LogoExpoLight from   '/public/images/logos/logo-wordmark-light.png';
 
 import LogoUpwork from '/public/images/logos/logo-upwork.svg';
 import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
@@ -106,6 +107,7 @@ export const TECHNOLOGIES: TechDetailsType[] = [
   {
     label: 'Expo',
     logo: LogoExpo,
+    darkModeLogo: LogoExpoLight,
     url: 'https://expo.dev/',
   },
   {

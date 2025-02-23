@@ -18,7 +18,7 @@ const ExperienceSection = () => {
   }, [inView]);
 
   return (
-    <Container className="bg-gray-50" ref={ref}>
+    <Container className="" ref={ref}>
       <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-slide-in' : ''}`}>
         <div className="self-center">
           <Tag label="Experience" />
