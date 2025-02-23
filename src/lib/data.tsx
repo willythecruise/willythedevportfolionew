@@ -33,6 +33,8 @@ import PrepaidMeter from '/public/images/prepaidmeter.png';
 import Relisted from '/public/images/relisted.png';
 import Naji from '/public/images/naji.png';
 import Sanitrack from '/public/images/sanitrack.png';
+import PlayMuse from '/public/images/playmuse.png';
+
 import AvatarKrisztian from '/public/images/avatar-krisztian.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
 import AvatarDummy from '/public/images/avatar-dummy.svg';
@@ -276,6 +278,37 @@ export const PROJECTS: ProjectDetails[] = [
     ],
   },
   {
+    name: 'Naji Realties',
+    description:
+      'A shortlet apartment, fully automated booking platform',
+    url: 'https://najirealties.ng',
+    previewImage: Naji,
+    technologies: [
+      'React',
+      'Next.js',
+      'Typescript',
+      'Tailwindcss',
+      'MongoDB',
+      'Storybook',
+    ],
+    
+  },
+  {
+    name: 'PlayMuse Administration Panel',
+    description:
+      'An administration dashboard for a music streaming platform',
+    url: '#',
+    previewImage: PlayMuse,
+    technologies: [
+      'React',
+      'Next.js',
+      'Typescript',
+      'Tailwindcss',
+      'Postgres',
+    ],
+    
+  },
+  {
     name: 'Sanitrack',
     description:
       'A facility management sanitation and supervision tracker',
@@ -291,21 +324,6 @@ export const PROJECTS: ProjectDetails[] = [
       'TRPC',
       'Express.js',
 
-    ],
-  },
-  {
-    name: 'Naji Realties',
-    description:
-      'A shortlet apartment, fully automated booking platform',
-    url: 'https://najirealties.ng',
-    previewImage: Naji,
-    technologies: [
-      'React',
-      'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'MongoDB',
-      'Storybook',
     ],
   },
 ];
