@@ -16,9 +16,11 @@
   --app-gray-800: 31 41 55;
   --app-gray-900: 17 24 39;
   --app-gray-950: 3 7 18;
+  --background-color: #ffffff; /* Light background */
+  --text-color: #000000; /* Light text */
 }
 
-.dark {
+[data-theme='dark'] {
   --app-gray-default: 3 7 18;
   --app-gray-50: 17 24 39;
   --app-gray-100: 31 41 55;
@@ -31,6 +33,14 @@
   --app-gray-800: 243 244 246;
   --app-gray-900: 249 250 251;
   --app-gray-950: 255 255 255;
+  --background-color: #1a1a1a; /* Dark background */
+  --text-color: #ffffff; /* Dark text */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @keyframes slide-in {

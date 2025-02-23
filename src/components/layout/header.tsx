@@ -21,7 +21,7 @@ const Logo = () => (
 const Header = () => {
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkTheme(prev => !prev);
