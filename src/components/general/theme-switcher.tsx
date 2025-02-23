@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import Typography from './typography';
 
 const ThemeSwitcher = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(true); // Default to dark theme
@@ -13,21 +14,16 @@ const ThemeSwitcher = () => {
 
 
   };
-
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', isDarkTheme ? 'dark' : 'light');
-    if (isDarkTheme) {
-      setTheme("dark")
-    }
-    else{
-      setTheme("light")
-    }
-  
+    const newTheme = isDarkTheme ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    setTheme(newTheme);
   }, [isDarkTheme]);
 
   return (
-    <button onClick={toggleTheme} aria-label="Toggle theme">
-      {isDarkTheme ? <Sun /> : <Moon />}
+    <button onClick={toggleTheme} aria-label="Toggle theme" className={`p-2 sm:p-0 ${theme== "dark" ? "bg-black": "bg-white"}`}>
+    <Typography className={`block sm:hidden ${theme === "dark" ? "text-white" : "text-black"}`}>Switch Theme</Typography>
+      {isDarkTheme ? <Sun  /> : <Moon />}
     </button>
   );
 };

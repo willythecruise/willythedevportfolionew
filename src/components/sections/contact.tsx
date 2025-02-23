@@ -24,7 +24,7 @@ const ContactSection = () => {
   const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(
     null
   );
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0 });
   const [animate, setAnimate] = useState(false);
 
   const handleCopyClick = async (text: string, type: CopyValue) => {
@@ -51,7 +51,7 @@ const ContactSection = () => {
   }, [inView]);
 
   return (
-    <Container id="contact" ref={ref}>
+    <Container id="contact" ref={ref} className='p-5 sm:p-0'>
       <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-slide-in' : ''}`}>
         <div className="self-center">
           <Tag label="Get in touch" />

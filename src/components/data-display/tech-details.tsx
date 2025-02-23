@@ -1,6 +1,5 @@
 'use client';
 
-
 import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import ImageWrapper from '@/components/data-display/image-wrapper';
@@ -11,7 +10,7 @@ const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetailsType) => {
     <div className="flex flex-col items-center gap-2 animate-pulse">
       <Link noCustomization href={url} externalLink>
         <ImageWrapper
-          src={ logo }
+          src={logo}
           srcForDarkMode={darkModeLogo}
           
           alt={label}

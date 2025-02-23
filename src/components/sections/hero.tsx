@@ -10,10 +10,12 @@ import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 import EmmanuelWilliam from  '/public/images/EmmanuelWilliam.jpg';
+import { useTheme } from 'next-themes';
 
 const HeroSection = () => {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0 });
   const [animate, setAnimate] = useState(false);
+  const {theme}= useTheme()
 
   useEffect(() => {
     if (inView) {
@@ -30,7 +32,7 @@ const HeroSection = () => {
             <Image
               src={EmmanuelWilliam}
               alt="Headshot of Sagar"
-              className="sm:absolute z-10 h-[280px] w-full sm:border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-full md:w-full"
+              className={`sm:absolute z-10 h-[280px] w-full border-8 rounded-3xl max-md:left-5 md:left-0 md:top-0 md:h-full md:w-full dark:border-white border-black`}
               style={{ objectFit: 'cover' }}
             ></Image>
             <div className="absolute h-[280px] w-[280px] border-8 border-transparent  max-md:top-5 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]"></div>
