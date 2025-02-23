@@ -21,7 +21,7 @@ const ThemeSwitcher = () => {
   }, [isDarkTheme]);
 
   return (
-    <button onClick={toggleTheme} aria-label="Toggle theme" className={`p-2 sm:p-0 ${theme== "dark" ? "bg-black": "bg-white"}`}>
+    <button onClick={toggleTheme} aria-label="Toggle theme" className={`p-2 sm:p-0 ${theme === "dark" ? "bg-black" : "bg-white"} sm:bg-transparent`}>
     <Typography className={`block sm:hidden ${theme === "dark" ? "text-white" : "text-black"}`}>Switch Theme</Typography>
       {isDarkTheme ? <Sun  /> : <Moon />}
     </button>
