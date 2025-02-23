@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 
 const ExperienceSection = () => {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0 });
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {

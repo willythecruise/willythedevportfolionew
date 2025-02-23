@@ -24,7 +24,7 @@ const ContactSection = () => {
   const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(
     null
   );
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0 });
   const [animate, setAnimate] = useState(false);
 
   const handleCopyClick = async (text: string, type: CopyValue) => {

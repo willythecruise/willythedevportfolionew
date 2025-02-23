@@ -24,7 +24,7 @@ const ProjectDetails = ({
   layoutType = 'default',
 }: ProjectDetailsProps) => {
 
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0 });
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const ProjectDetails = ({
       {/* Image */}
       <div
         className={mergeClasses(
-          `flex items-center justify-center border-gray-100 bg-gray-50 p-8 dark:bg-gray-200 max-md:rounded-t-xl md:w-1/2 lg:p-12`,
+          `flex items-center justify-center border-gray-100  p-8 max-md:rounded-t-xl md:w-1/2 lg:p-12`,
           layoutType === 'default'
             ? 'md:rounded-l-xl md:border-r'
             : 'md:order-last md:rounded-r-xl md:border-l'
