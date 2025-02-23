@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
   }, [inView]);
 
   return (
-    <Container ref={ref}>
+    <Container ref={ref} id='testimonials'>
       <div className={`flex flex-col items-center gap-4 ${animate ? 'animate-panInBottom' : ''}`}>
         <Typography variant="h2" className="text-center">
           Testimonials
