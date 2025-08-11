@@ -49,8 +49,8 @@ const HeroSection = () => {
 
             <Typography className='sm:text-3xl text-xl p-3 font-light tracking-tighter text-center md:text-left'>
               I am a fullstack software engineer with a BSc in computer science,
-              having over 4 years of experience deploying applications. 
-              I currently work with Orion Limited, a Texas affiliated Nigerian company in the FCT,
+              having over 4 years of experience deploying applications. I currently work with one if the biggest mortgage banks in Nigeria, Infinity Trust Mortgage Bank, and
+              have worked with Orion Limited, a Texas affiliated Nigerian company in the FCT,
               as a software architect and engineer, where we build industry-grade applications, 
               that provide solutions to large factories.
             </Typography>
