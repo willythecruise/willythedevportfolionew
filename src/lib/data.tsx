@@ -3,6 +3,8 @@ import { Github, Twitter, Figma } from 'lucide-react';
 import LogoJavascript from '/public/images/logos/icon-javascript.svg';
 import LogoTypescript from '/public/images/logos/icon-typescript.svg';
 import LogoReact from '/public/images/logos/icon-react.svg';
+import LogoVue from '/public/images/logos/icon-vue.svg';
+import LogoVueLight from '/public/images/logos/icon-vue-light.svg';
 import LogoNextjs from '/public/images/logos/icon-nextjs.svg';
 import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
 import LogoExpress from '/public/images/logos/icon-express.svg';
@@ -105,6 +107,12 @@ export const TECHNOLOGIES: TechDetailsType[] = [
     label: 'React',
     logo: LogoReact,
     url: 'https://react.dev/',
+  },
+  {
+    label: 'Vue',
+    logo: LogoVue,
+    darkModeLogo: LogoVueLight,
+    url: 'https://vuejs.org/',
   },
   {
     label: 'Expo',
